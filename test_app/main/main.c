@@ -25,7 +25,7 @@ static void my_task1(void* arg)
     {
         if(xQueueReceive(my_queue, &data, portMAX_DELAY))
         {
-            printf("called from ISR, GPIO%d is %s\n", data, ((gpio_get_level(data)==1)?"HIGH":"LOW"));
+            printf("called from ISR, GPIO_IN_00(GPIO%d) is %s\n", data, ((gpio_get_level(data)==1)?"HIGH":"LOW"));
             gpio_set_level(GPIO_OUT_00, gpio_get_level(GPIO_IN_00));
         }
     }
