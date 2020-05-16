@@ -18,7 +18,6 @@ static void gpio_isr(void* arg)
     xQueueSendFromISR(my_queue, &gpio_num, NULL);
 }
 
-
 static void my_task1(void* arg)
 {
     int data;
@@ -31,7 +30,6 @@ static void my_task1(void* arg)
         }
     }
 }
-
 
 void app_main(void)
 {
